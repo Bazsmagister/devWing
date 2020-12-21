@@ -14,7 +14,16 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        // $articleCount = Article::count();
+        //$articles = Article::paginate();
+
+        $articles = Article::all();
+
+        //dd($articles);
+
+        //$articles = Article::all()->orderBy('created_at', 'desc');
+
+        return view('articles.index', compact('articles'));
     }
 
     /**
@@ -46,7 +55,8 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        //compact function gives the view the $article.
+        return view('articles.show', compact('article'));
     }
 
     /**
