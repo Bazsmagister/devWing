@@ -48,6 +48,10 @@ php artisan route:list
 
 ## Views:
 
+I created a layouts/app.blade.php file with the basic html structures in it.
+
+In the other blade files I extend the app.blade.php. (easier to maintain).
+
 In resources/views/ I created an articles directory with 2 files within it:
 
 index.blade.php and show.blade.php
